@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>huynd-JS</title>
+</head>
+<body>
+    <h1>AAAAAAAAA</h1>
+    <p id="demo">bbbbbbbbbbbbbb</p>
+
+    <script>
+        let arr, a
+        function removeFromArray(arr, a) {
+            arr.forEach((e) => {
+                if(arr[e]==a) {
+                    arr.splice(e, 1)
+                } 
+            })
+            return arr
+        }
+        console.log(removeFromArray([1, 2, 3, 4, 8, 10], 8))
+    </script>    
+</body>
+</html>

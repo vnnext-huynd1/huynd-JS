@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>huynd-JS</title>
+</head>
+<body>
+    <h1>AAAAAAAAA</h1>
+    <p id="demo">aaaaa</p>
+
+    <script>
+        const people = [
+        {
+            name: "Carly",
+            yearOfBirth: 1942,
+            yearOfDeath: 1970,
+        },
+        {
+            name: "Ray",
+            yearOfBirth: 1961,
+            yearOfDeath: 2011,
+        },
+        {
+            name: "Jane",
+            yearOfBirth: 1914,
+            yearOfDeath: 1941,
+        },
+        {
+            name: "Micle",
+            yearOfBirth: 1952,
+            yearOfDeath: 2001,
+        },
+        {
+            name: "Poster",
+            yearOfBirth: 1922,
+            yearOfDeath: 1951,
+        }
+        ]
+
+        let arrAge = []
+        for (ele of people) {
+            let age = ele.yearOfDeath - ele.yearOfBirth
+            arrAge.push(age)
+        }
+        let maxAge = Math.max.apply(Math,arrAge)
+        const find = (needle, stack) => {
+            var results = [];
+            var idx = stack.indexOf(needle);
+            while (idx != -1) {
+                results.push(idx);
+                idx = stack.indexOf(needle, idx + 1);
+            }
+            return results;
+        }
+        var arrIndexMaxAge = find(maxAge, arrAge)
+        let infoMaxAge = []
+
+        // FINDOLDEST
+        const findTheOldest = (people) => {
+            arrIndexMaxAge.forEach((e) => {
+                infoMaxAge.push(people[e])
+            })
+            return infoMaxAge
+        }
+        console.log(findTheOldest(people))
+    </script>    
+
+</body>
+</html>
