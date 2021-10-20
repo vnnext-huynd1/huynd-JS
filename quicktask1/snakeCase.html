@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>huynd-JS</title>
+</head>
+<body>
+    <h1>AAAAAAAAA</h1>
+    <p id="demo">bbbbbbbbbbbbbb</p>
+
+    <script>
+        let test = 'SnAkE..CaSe..Is..AwEsOmE???'
+        regex = /[.`~!?@#$%^&*()_+, -]+/
+        if (regex.test(test)) {
+            console.log(test.match(/[a-zA-Z]+/g).join('_').toLocaleLowerCase())
+        } else {            
+            console.log(test.match(/[a-z]+|[A-Z][a-z]+/g).join('_').toLocaleLowerCase())
+        }
+    </script>    
+
+</body>
+</html>
